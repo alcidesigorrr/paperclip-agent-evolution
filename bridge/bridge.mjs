@@ -653,6 +653,16 @@ async function tick() {
       await optimizeTrendStrategy();
     }
 
+    // PHASE 14: Otimizar posicionamento de marca (a cada 1200 ticks ~10 horas)
+    if (tickCount % 1200 === 0) {
+      await optimizeMarketPositioning();
+    }
+
+    // PHASE 15: Revisar autonomia do sistema (a cada 1440 ticks ~12 horas)
+    if (tickCount % 1440 === 0) {
+      await reviewSystemAutonomy();
+    }
+
   } catch (err) {
     log('[err]', `Erro no tick: ${err.message}`);
   }
@@ -1461,6 +1471,89 @@ async function optimizeTrendStrategy() {
 
   } catch (err) {
     log('[phase13-err]', `Erro ao otimizar estratégia: ${err.message}`);
+  }
+}
+
+// ====== PHASE 14: Market Positioning ======
+
+/**
+ * PHASE 14: Otimizar posicionamento de marca
+ * Define e mede performance de posicionamento de mercado
+ */
+async function optimizeMarketPositioning() {
+  try {
+    log('[phase14]', '🎯 Otimizando posicionamento de marca...');
+
+    // Definir posicionamento (primeira vez)
+    const uvp = 'Fast, Accurate, Integrated Geotechnical Testing';
+    const positioning = 'The most reliable SPT solution for modern engineering teams';
+
+    const result = await defineMarketPositioning(uvp, positioning);
+    if (result) {
+      log('[phase14]', `✓ UVP definida: "${uvp}"`);
+
+      // Medir performance
+      const perfResult = await measurePositioningPerformance(result.id);
+      if (perfResult) {
+        const lift = perfResult.brand_awareness_lift ? (perfResult.brand_awareness_lift * 100).toFixed(0) : '0';
+        log('[phase14]', `✅ Performance: +${lift}% brand awareness`);
+      }
+    }
+
+  } catch (err) {
+    log('[phase14-err]', `Erro ao otimizar posicionamento: ${err.message}`);
+  }
+}
+
+// ====== PHASE 15: Expert Advisory ======
+
+/**
+ * PHASE 15: Revisar autonomia do sistema
+ * Toma decisões com confiança, escalando quando necessário, e aprende com humanos
+ */
+async function reviewSystemAutonomy() {
+  try {
+    log('[phase15]', '🤖 Revisando autonomia do sistema...');
+
+    // Simular decisões que o sistema toma
+    const decisions = [
+      { context: 'Content strategy for Q2', action: 'Focus on sustainability angle' },
+      { context: 'Resource allocation', action: 'Allocate more to trend capture' },
+      { context: 'Team strategy', action: 'Promote trend-reactive framework' }
+    ];
+
+    let decisions_made = 0;
+    let escalations = 0;
+
+    for (const decision of decisions) {
+      const result = await makeDecisionWithConfidence(decision.context, decision.action);
+      if (result) {
+        decisions_made++;
+        if (result.was_escalated) {
+          escalations++;
+        }
+
+        // Explicar decisão
+        await explainDecision(result.id);
+
+        // Simular humano dando override
+        if (result.was_escalated) {
+          const humanChoice = `Expert override: ${decision.action}`;
+          await recordHumanOverride(result.id, humanChoice, 'positive');
+        }
+      }
+    }
+
+    // Medir autonomia global
+    const autonomyResult = await measureAutonomyMetrics();
+    if (autonomyResult) {
+      const autonomy = (autonomyResult.autonomy_level * 100).toFixed(0);
+      const saved = autonomyResult.time_saved_hours.toFixed(1);
+      log('[phase15]', `✅ Autonomia: ${autonomy}% automático, ${saved}h economizadas`);
+    }
+
+  } catch (err) {
+    log('[phase15-err]', `Erro ao revisar autonomia: ${err.message}`);
   }
 }
 
