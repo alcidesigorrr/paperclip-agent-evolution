@@ -1,6 +1,6 @@
-# Paperclip Agent Evolution System v2.0
+# Paperclip Agent Evolution System v2.1
 
-> Sistema de evolução multi-agente com 10 fases de aprendizado autônomo e adaptação contínua.
+> Sistema de evolução multi-agente com 15 fases de aprendizado autônomo, criatividade, fact-checking, trend detection, e decisão inteligente com explicabilidade.
 
 ## 🎯 Visão Geral
 
@@ -18,7 +18,9 @@ Paperclip é um **orquestrador de agentes IA autônomos** que evolui continuamen
 
 ---
 
-## 📋 As 10 Fases
+## 📋 As 15 Fases
+
+### Fases 1-10: Autonomia & Otimização
 
 | # | Fase | Descrição | Gatilho |
 |---|------|-----------|---------|
@@ -32,6 +34,16 @@ Paperclip é um **orquestrador de agentes IA autônomos** que evolui continuamen
 | 8 | **Knowledge Transfer** | Best practices descobertas e propagadas entre times | ~3-3.5h |
 | 9 | **Emergent Hierarchies** | Organização forma hierarquias dinâmicas com delegação | ~4.5h |
 | 10 | **Strategy Optimization** | Sistema aprende estratégias e as refina continuamente | ~2.5-5h |
+
+### Fases 11-15: Criatividade, Verificação, Inteligência de Mercado & Decisão Inteligente
+
+| # | Fase | Descrição | Gatilho |
+|---|------|-----------|---------|
+| 11 | **Creative Generation** | Claude API gera ideias novas, agentes votam, sistema aprende padrões | ~4h |
+| 12 | **Fact-Checking** | Multi-source verification de claims, 95%+ acurácia garantida | ~3h |
+| 13 | **Trend Detection** | Real-time monitoring de Twitter/Google Trends, quick execution (<2h) | ~2h |
+| 14 | **Market Positioning** | Define UVP unificado, mede brand awareness/preference/value | ~10h |
+| 15 | **Expert Advisory** | Decisões com confiança, explicabilidade, escalação inteligente | ~12h |
 
 ---
 
