@@ -1,0 +1,40 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+*.pid
+
+# Testing
+.coverage/
+coverage/
+.nyc_output/
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Supabase
+.supabase/
+supabase/.env.local

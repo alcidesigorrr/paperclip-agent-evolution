@@ -1,0 +1,48 @@
+{
+  "name": "paperclip-agent-evolution",
+  "version": "2.0.0",
+  "description": "Multi-agent autonomous system with 10 phases of continuous learning and evolution",
+  "type": "module",
+  "main": "modules/bridge.mjs",
+  "scripts": {
+    "start": "node modules/bridge.mjs",
+    "dev": "NODE_ENV=development node modules/bridge.mjs",
+    "test": "node tests/run-all-tests.js",
+    "test:phase1": "node tests/phase1-tests.js",
+    "test:phase2": "node tests/phase2-tests.js",
+    "test:phase7": "node tests/phase7-tests.js",
+    "test:phase8": "node tests/phase8-tests.js",
+    "test:phase9": "node tests/phase9-tests.js",
+    "test:phase10": "node tests/phase10-tests.js",
+    "lint": "eslint modules/ --fix",
+    "db:migrate": "supabase db push",
+    "db:reset": "supabase db reset"
+  },
+  "keywords": [
+    "agents",
+    "evolution",
+    "autonomous",
+    "multi-agent",
+    "learning",
+    "supabase"
+  ],
+  "author": "Igor Alcides <igor@labnex.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alcidesigorrr/paperclip-agent-evolution.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alcidesigorrr/paperclip-agent-evolution/issues"
+  },
+  "homepage": "https://github.com/alcidesigorrr/paperclip-agent-evolution#readme"
+}
